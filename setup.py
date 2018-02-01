@@ -46,7 +46,7 @@ def find_data_files(srcdir, *wildcards, **kw):
         return file_list
 
 
-files = find_data_files('vapeplot', '*.*')
+files = find_data_files('vapeplot/', '*.*')
 
 
 def read(fname):
@@ -63,8 +63,8 @@ setup(
     keywords="vaporwave matplotlib",
     url="https://github.com/dantaki/vapeplot/",
     packages=['vapeplot'],
-    package_dir={'vapeplot':'vapeplot/'},
-    package_data= { 'vapeplot': ['vapeplot/aesthetics.json'] },
+    package_dir={'vapeplot': 'vapeplot'},
+    package_data={'vapeplot': ['vapeplot/aesthetics.json']},
     data_files=files,
     long_description=read('README.md'),
     include_package_data=True,
