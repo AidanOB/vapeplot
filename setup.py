@@ -46,7 +46,7 @@ def find_data_files(srcdir, *wildcards, **kw):
         return file_list
 
 
-files = find_data_files('vapeplot/', '*.*')
+files = find_data_files('vapeplot', '*.*')
 
 
 def read(fname):
